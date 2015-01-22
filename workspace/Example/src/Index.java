@@ -19,10 +19,24 @@ public class Index<Something> {
 	/**
 	 * Build up the index with entries at locations.
 	 * 
+	 * if the entry is not in the index already
+	 *  create the set
+	 *  add the location to the corresponding set
+	 * 
+	 * 
 	 * @param entry
 	 * @param location
 	 */
-	public void addItem(Something entry, int location) {
+	public void addItem(Something entry, int location) 
+	{	// If the index doesn't have an entry in it
+		// put something there (create a set)
+		// No matter what, we need to add to an entry the location
+		if (!index.containsKey(entry)) {
+			index.put(entry, new HashSet<Integer>());
+		}
+		
+		index.get(entry).add(location);
+		
 		
 	}
 	
@@ -33,6 +47,6 @@ public class Index<Something> {
 	 * @return
 	 */
 	public Set<Integer> getIndices(Something entry) {
-		return null;
+		return index.get(entry);
 	}
 }
