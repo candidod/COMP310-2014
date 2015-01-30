@@ -17,8 +17,7 @@ public class RPN
 			// Check for +, -, /, *
 			if (token.equals("+")) 
 			{
-				System.out.println(stack); //Addition Stack Operation
-			
+				System.out.println(stack); //Addition Stack Operation			
 				num1 = stack.pop();
 				num2 = stack.pop();
 				sum = num1 + num2;
