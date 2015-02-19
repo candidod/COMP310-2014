@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 // The console user interface
 public class HangmanController {
-	private static void view(Hangman game) {
+	private static void view(EvilHangman game) {
 		System.out.format("Guesses remaining: %d\nYou used: %s\nWord: %s\n",
 				game.guessesRemaining(),
 				game.getGuesses().toString(),
 				game.visible());
 	}
-	public static void consoleUI(Hangman game) {
+	public static void consoleUI(EvilHangman game) {
 		Scanner scanner = new Scanner(System.in);
 		char letter;
 		String line;
@@ -33,7 +33,7 @@ public class HangmanController {
 	}
 	// TODO: change the constructor to use EvilHangman
 	public static void main(String[] args) throws FileNotFoundException {
-		Hangman game = new Hangman();
+		EvilHangman game = new EvilHangman();
 		game.setWord("fly");
 		HangmanController.consoleUI(game);
 	}

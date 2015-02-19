@@ -17,7 +17,7 @@ public class BinaryTreeNodeTest {
 		assertEquals("fish", tree.right.data);
 		assertEquals("turtle", tree.right.right.data);
 		assertEquals("snake", tree.right.right.left.data);
-		assertTrue(tree.contains("snake"));
+		
 	}
 
 }
