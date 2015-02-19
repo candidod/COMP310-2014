@@ -11,9 +11,10 @@ public class NodeTest {
 		Node<Integer> thing2 = new Node<Integer>();
 		thing1.setData(3);
 		thing2.setData(10);
-		thing1.setNext(thing2);
+		thing1.setNext(thing2); //thing 1 points to thing 2
 		assertEquals(thing2, thing1.getNext());
 		assertEquals(thing1, thing2.getPrev());
+		
 	}
 
 }
